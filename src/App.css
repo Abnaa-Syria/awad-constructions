@@ -187,7 +187,7 @@ body {
 
 .hero-content h1 {
   color: var(--primary);
-  line-height: 1.36;
+  line-height: 1.52;
   font-size: clamp(1.85rem, 4.5vw, 3rem);
   margin: 1rem 0 1rem;
   font-weight: 800;
@@ -417,6 +417,7 @@ body {
   text-shadow: 0 6px 24px rgba(0, 0, 0, 0.24);
   margin-top: 0.7rem;
   font-weight: 800;
+  line-height: 1.52;
 }
 
 .hero-content.centered p {
@@ -1267,7 +1268,23 @@ body {
   min-height: 2.5em;
 }
 
-.project-card-link,
+.project-card-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: auto;
+  padding: 0.48rem 0.75rem;
+  border-radius: 0.65rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.76rem;
+  color: var(--primary);
+  background: rgba(85, 147, 232, 0.1);
+  border: 1px solid rgba(46, 97, 160, 0.18);
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
 .blog-card-link {
   display: inline-flex;
   align-items: center;
@@ -1285,7 +1302,12 @@ body {
   transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
-.project-card-link:hover,
+.project-card-link:hover {
+  background: rgba(46, 97, 160, 0.1);
+  border-color: var(--secondary);
+  color: #1a4d7a;
+}
+
 .blog-card-link:hover {
   background: rgba(46, 97, 160, 0.1);
   border-color: var(--secondary);
@@ -1296,6 +1318,11 @@ body {
 .blog-card-link-icon {
   flex-shrink: 0;
   opacity: 0.85;
+}
+
+.project-card-link .project-card-link-icon {
+  width: 0.875rem;
+  height: 0.875rem;
 }
 
 .project-content a:not(.project-card-link),
@@ -1313,9 +1340,9 @@ body {
 }
 
 .blog-image {
+  width: 100%;
   min-height: 0;
-  height: clamp(180px, 21vw, 230px);
-  aspect-ratio: auto;
+  aspect-ratio: 16 / 10;
   border-bottom: 1px solid rgba(46, 97, 160, 0.12);
   border-radius: 1.125rem 1.125rem 0 0;
   background:
@@ -1338,7 +1365,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 38%;
+  object-position: center 50%;
   display: block;
   transition: transform 420ms ease;
 }
@@ -1547,6 +1574,15 @@ body {
     grid-template-columns: 1fr;
   }
 
+  /* صور المقالات: إطار أوضح على الجوال + تركيز أقل على السماء */
+  .blog-image {
+    aspect-ratio: 3 / 2;
+  }
+
+  .blog-image-media {
+    object-position: center 55%;
+  }
+
   .brand-text {
     max-width: 190px;
     font-size: 0.86rem;
@@ -1554,6 +1590,7 @@ body {
 
   .hero-content h1 {
     font-size: 1.7rem;
+    line-height: 1.52;
   }
 
   .hero-section {

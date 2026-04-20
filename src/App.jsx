@@ -26,8 +26,8 @@ import Footer from './components/Footer'
 import GroupCompanyCard from './components/GroupCompanyCard'
 import VisionGoalsBlock from './components/VisionGoalsBlock'
 import Reveal from './components/Reveal'
-import mosqueProjectImage from './imgs/Screenshot 2026-04-20 183629.png'
-import aboutSectionImage from './imgs/Screenshot 2026-04-20 183739.png'
+import mosqueProjectImage from './imgs/image.png'
+import aboutSectionImage from './imgs/ricardo-gomez-angel-zaxoaZVazCs-unsplash.jpg'
 import heroBackgroundImage from './imgs/ej-yao-D46mXLsQRJw-unsplash (1).jpg'
 
 const imageModules = import.meta.glob('./imgs/*.png', {
@@ -216,7 +216,7 @@ function App() {
             <div className="about-grid reveal-stagger">
               <div className="about-media">
                 {aboutImage ? (
-                  <img className="media-image" src={aboutImage} alt="صورة فريق العمل بالموقع" />
+                  <img className="media-image" src={aboutImage} alt="مشهد من أعمال البناء والتشييد" />
                 ) : (
                   <span className="image-chip">صورة بديلة: فريق هندسي بالموقع</span>
                 )}
