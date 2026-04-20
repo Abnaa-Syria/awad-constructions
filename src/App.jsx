@@ -25,6 +25,7 @@ import CTASection from './components/CTASection'
 import Footer from './components/Footer'
 import GroupCompanyCard from './components/GroupCompanyCard'
 import VisionGoalsBlock from './components/VisionGoalsBlock'
+import GeneralManagerMessage from './components/GeneralManagerMessage'
 import Reveal from './components/Reveal'
 import mosqueProjectImage from './imgs/image.png'
 import aboutSectionImage from './imgs/ricardo-gomez-angel-zaxoaZVazCs-unsplash.jpg'
@@ -238,6 +239,14 @@ function App() {
               </div>
             </div>
             <VisionGoalsBlock />
+            </div>
+          </Reveal>
+        </section>
+
+        <section className="section section-white gm-message-section" id="gm-message" aria-label="كلمة المدير العام">
+          <Reveal>
+            <div className="container">
+              <GeneralManagerMessage />
             </div>
           </Reveal>
         </section>
